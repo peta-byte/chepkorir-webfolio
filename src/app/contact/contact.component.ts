@@ -7,7 +7,7 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./contact.component.css"]
 })
 export class ContactComponent implements OnInit {
-  @ViewChild(NgForm) contactForm: NgForm;
+  @ViewChild('contactForm', { static: false, read: false }) contactForm: NgForm;
   ngOnInit(): void {
     this.contactForm.reset();
   }
