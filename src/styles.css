@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
+html {
+  font-family: sans-serif;
+}
 body {
   font-family: sans-serif;
+}
+.w3-theme-l5 {
+  color: #000 !important;
+  background-color: #eef2f9 !important;
 }
