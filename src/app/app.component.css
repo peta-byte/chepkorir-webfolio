@@ -1,3 +1,58 @@
 ul {
   text-align: center;
 }
+#main-div {
+  text-align: center;
+}
+#icons {
+  margin-top: 10px;
+  text-align: center;
+}
+#icon {
+  width: 40px;
+  height: 40px;
+}
+li a {
+  margin-right: 5px;
+  min-width: 150px;
+}
+li a:hover {
+  font-size: 3em;
+}
+li .active {
+  font-size: 3em;
+}
+.w3-text-theme {
+  color: #223a5e !important;
+}
+.w3-theme {
+  color: #fff !important;
+  background-color: #223a5e !important;
+}
+.w3-theme-d1 {
+  color: #fff !important;
+  background-color: #1e3454 !important;
+}
+.w3-theme-l5 {
+  color: #000 !important;
+  background-color: #eef2f9 !important;
+}
+.w3-theme-l1 {
+  color: #fff !important;
+  background-color: #365c96 !important;
+}
+.w3-theme-l2 {
+  color: #fff !important;
+  background-color: #5681c2 !important;
+}
+footer {
+  background-image: url("../assets/images/4k-wallpaper-clean-desk-1420709.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#resume-block {
+  height: 100%;
+  width: 100%;
+}

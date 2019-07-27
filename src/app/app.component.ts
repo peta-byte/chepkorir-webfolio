@@ -1,10 +1,23 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
-  title = "CodeSandbox";
+export class AppComponent implements OnInit {
+  headerTitle: string;
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.router.events.subscribe(value => {
+      if (value.url && value.url === "/projects") {
+        this.headerTitle = "Projects";
+      } else if (value.url && value.url === "/others") {
+        this.headerTitle = "Others";
+      } else {
+        // Do nothing
+      }
+    });
+  }
 }
