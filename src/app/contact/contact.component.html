@@ -1,1 +1,95 @@
-
+<div id="side-to-side" class="container">
+  <div class="row">
+    <div class="col-sm">
+      <img
+        id="writing-img"
+        src="../../assets/images/background-blank-commerce-583847.jpg"
+        data-toggle="popover"
+        title="Photo by Jessica Lewis from Pexels"
+        data-trigger="hover"
+        data-content=""
+      />
+    </div>
+    <div id="contact-form" class="col-sm">
+      <h1 class="display-5">Contact me</h1>
+      <form
+        action="mailto:wlmrolga@gmail.com"
+        method="post"
+        enctype="text/plain"
+        #contactForm="ngForm"
+        (ngSubmit)="onSubmit()"
+        ngNativeValidate
+      >
+        <div class="form-group">
+          <label id="name">Name</label>
+          <div class="row">
+            <div class="col-sm">
+              <input
+                type="text"
+                class="form-control"
+                id="first"
+                placeholder="First"
+                name="first"
+                ngModel
+                required
+                minlength="3"
+                maxlength="10"
+              />
+            </div>
+            <div class="col-sm">
+              <input
+                type="text"
+                class="form-control"
+                id="last"
+                placeholder="Last"
+                name="last"
+                ngModel
+                required
+                minlength="3"
+                maxlength="10"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label id="email" for="email">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+            ngModel
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="comment" for="comment">Comment</label>
+          <textarea
+            class="form-control"
+            name="comment"
+            id="comment"
+            rows="4"
+            ngModel
+            required
+            minlength="3"
+          ></textarea>
+        </div>
+        <input
+          type="submit"
+          [disabled]="!contactForm.valid"
+          class="btn btn-dark mb-1"
+          name="send"
+          value="Send"
+        />
+        <input
+          type="reset"
+          [disabled]="contactForm.pristine && !contactForm.touched"
+          class="btn btn-dark mb-1"
+          name="Reset"
+          value="Reset"
+        />
+      </form>
+    </div>
+  </div>
+</div>
