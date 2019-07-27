@@ -1,1 +1,22 @@
-
+.container {
+  background-color: white;
+}
+a {
+  text-decoration: underline;
+}
+#first-img {
+  max-width: 50%;
+  float: right;
+}
+#second-img {
+  max-width: 50%;
+  float: left;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.w3-text-theme {
+  color: #223a5e !important;
+}
