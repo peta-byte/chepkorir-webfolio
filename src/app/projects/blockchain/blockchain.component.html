@@ -1,31 +1,50 @@
 <div class="container">
   <div class="container">
+    <p class="p-3">
+      A collaborative Blockchain hackathon project developed for the annual
+      University of Arkansas Blockchain hackathon in 2018.
+    </p>
     <div class="row">
       <div class="col-sm">
         <ul>
-          <h6>Tools</h6>
+          <h5 class="bg-dark text-white p-2">Tools</h5>
           <li>Hyperledger Composer</li>
-          <li>
-            Sample Bill of Lading (BOL) sheet - Karen digitized the BOL to
-            eliminate the need for paper.
+          <li
+            data-toggle="popover"
+            title="Karen digitized the BOL to
+          eliminate the need for paper"
+            data-trigger="hover"
+            data-content=""
+          >
+            Sample Bill of Lading (BOL) sheet
           </li>
-          <li>
-            Django - Michael created the web app that took data filled into the
-            BOL and create pdf files from it.
+          <li
+            data-toggle="popover"
+            title="Michael created the web app that took data filled into the
+          BOL and create pdf files from it"
+            data-trigger="hover"
+            data-content=""
+          >
+            Django
           </li>
           <li>Hyperledger Fabric</li>
         </ul>
         <ul>
-          <h6>Platforms</h6>
-          <li>
-            IBM LinuxONE - hosted the Virtual Machine that ran Docker containers
-            for Hyperledger Composer and ran other supporting processes.
+          <h5 class="bg-dark text-white p-2">Platforms</h5>
+          <li
+            data-toggle="popover"
+            title="hosted the Virtual Machine that ran Docker containers
+          for Hyperledger Composer and ran other supporting processes"
+            data-trigger="hover"
+            data-content=""
+          >
+            IBM LinuxONE
           </li>
         </ul>
       </div>
       <div class="col-sm">
         <ul>
-          <h6>Languages & Styles</h6>
+          <h5 class="bg-dark text-white p-2">Languages & Styles</h5>
           <li>JavaScript -business network logic</li>
           <li>Python</li>
         </ul>
@@ -33,29 +52,31 @@
     </div>
   </div>
 </div>
-<truck-hunt-root></truck-hunt-root>
+<div class="container">
+  <truck-hunt-root></truck-hunt-root>
+</div>
 <div class="container" id="truck-hunt-summary">
-  <blockquote class="blockquote text-left">
-    <p class="mb-0">
-      "I created the business network for Truck Hunt in the Hyperledger
-      Composer, wrote the code for its assets, participants, transactions and
-      the functions behind the transactions. Then, I added some basic access
-      rules in the Access Control List (ACL) file and deployed it to the
-      Hyperledger Fabric."
+  <blockquote class="text-left">
+    <p class="mb-0 p-4 font-italic">
+      I created the business network for Truck Hunt in the Hyperledger Composer,
+      wrote the code for its assets, participants, transactions and the
+      functions behind the transactions. Then, I added some basic access rules
+      in the Access Control List (ACL) file and deployed it to the Hyperledger
+      Fabric.
     </p>
-    <p class="mb-0">
-      "All resources belonging to the network belonged to the owner of the
+    <p class="mb-0 p-4 font-italic">
+      All resources belonging to the network belonged to the owner of the
       network (a Carrier - J. B. Hunt in this case) who had Read/Write access to
       them. The other participants (other carriers, and shippers) had Read only
       access. The network would store the hashed versions of the pdf of the BOLs
       with other metadata about the related shipment which would be available
-      for viewing to all participants of the network."
+      for viewing to all participants of the network.
     </p>
-    <p>
-      "The Hyperledger Composer and Fabric were choice tools for the task seeing
+    <p class="mb-0 p-4 font-italic">
+      The Hyperledger Composer and Fabric were choice tools for the task seeing
       as the Fabric is an enterprise grade Blockchain technology. The linuxONE
       Virtual Machine made creating a default API for the network easier which
-      was implemented using Swagger."
+      was implemented using Swagger.
     </p>
   </blockquote>
 </div>
