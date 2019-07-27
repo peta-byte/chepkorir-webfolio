@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -11,13 +11,15 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.router.events.subscribe(value => {
-      if (value.url && value.url === "/projects") {
-        this.headerTitle = "Projects";
-      } else if (value.url && value.url === "/others") {
-        this.headerTitle = "Others";
-      } else {
-        // Do nothing
-      }
+    	if (value instanceof NavigationEnd) {
+          if (value.url && value.url === "/projects") {
+	       this.headerTitle = "Projects";
+	  } else if (value.url && value.url === "/others") {
+	       this.headerTitle = "Others";
+	  } else {
+	        // Do nothing
+      	  }
+        }
     });
   }
 }
