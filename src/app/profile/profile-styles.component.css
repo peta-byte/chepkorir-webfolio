@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+
+#section {
+  background-image: url("../../assets/images/4k-wallpaper-clean-desk-1420709.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+}
+#profile-img {
+  width: 20%;
+  height: 20%;
+}
+#centered {
+  text-align: center;
+  padding: 50px;
+}
+#folio-intro {
+  padding-bottom: 0px;
+}
+.w3-text-theme {
+  color: #223a5e !important;
+}
+.w3-theme-d1 {
+  color: #fff !important;
+  background-color: #1e3454 !important;
+}
+#portfolio a:hover {
+  text-decoration: none;
+}
+.name-font {
+  font-family: "Bree Serif", serif;
+}
