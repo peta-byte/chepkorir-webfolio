@@ -8,7 +8,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --prod=true",
-    "build": "ng build --prod=true --base-href /chepkorir-webfolio/",
+    "build": "ng build --prod=true",
+    "heroku-postbuild": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,18 +24,22 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
+    "@angular/cli": "~8.1.2",
+    "@angular/compiler-cli": "~8.1.2",
     "bootstrap": "4.3.1",
     "jquery": "^3.4.1",
     "ngx-bootstrap": "5.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "w3-css": "4.1.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "typescript": "~3.4.3",
+    "enhanced-resolve": "4.1.0",
+    "express": "4.17.1",
+    "path": "0.12.7"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.2",
-    "@angular/cli": "~8.1.2",
-    "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
@@ -49,7 +54,6 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "tslint": "~5.15.0"
   }
 }
