@@ -7,7 +7,7 @@ import { Router, NavigationEnd } from "@angular/router";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  headerTitle: string;
+  headerTitle: string = "Projects";
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.router.events.subscribe(value => {
