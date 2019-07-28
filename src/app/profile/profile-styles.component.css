@@ -11,6 +11,8 @@
 #profile-img {
   width: 20%;
   height: 20%;
+  min-width: 150px;
+  min-height: 150px;
 }
 #centered {
   text-align: center;
