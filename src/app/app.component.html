@@ -11,39 +11,43 @@
   <skills></skills>
   <div id="resume-div" class="d-block p-0 w3-theme-l5">
     <div id="resume-block" class="card text-center w3-theme shadow">
-      <div class="card-body">
-        ...
-      </div>
+      <div class="card-body"> ... </div>
     </div>
   </div>
   <div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="resume-modal-title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content w3-theme-l5">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content w3-theme-l5 m-0 p-0">
         <div class="modal-header">
-          <h5 class="modal-title w3-xlarge w3-text-theme" id="resume-modal-title">Come Again!</h5>
+          <h4 class="modal-title w3-text-theme w3-xlarge" id="resume-modal-title">Thanks for Visiting!</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-        <div class="mb-1"
-        data-toggle="popover"
-  title="Photo by Giftpundits.com from Pexels"
-  data-trigger="hover"
-  data-content="">
-        <img id="thank-you" src="../assets/images/thank you.jpg">
+        <div class="modal-body row p-0 m-0">
+          <div id="modal-image" class="col-lg p-0 m-1" data-toggle="popover" title="Photo by rawpixel.com from Pexels" data-trigger="hover" data-content="">
+            <img id="m-img" class="m-0 p-0" src="../assets/images/balloons.jpg">
+          </div>
+          <div id="modal-content" class="col-lg p-0 m-1">
+            <p class="w3-text-theme w3-large m-2">I'd love to hear from you!</p>
+            <hr>
+            <form class="text-left">
+              <div class="form-group">
+                <label for="sender-name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="sender-name">
+              </div>
+              <div class="form-group">
+                <label for="comment-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" rows="4" id="comment-text"></textarea>
+              </div>
+            </form>
+          </div>
         </div>
-        <hr class="w3-grey">
-        <p class="w3-large mb-3">
-				          No wifi. No worries.
-        </p>
-          <a href="../assets/docs/Brenda C. Nyangweso's Resume.pdf" download>
-		            <button class="btn m-1 btn-dark">Resume</button>
-        </a>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Send message</button>
         </div>
       </div>
     </div>
-</div>
+  </div>
 </div>
 <footer class="w3-text-theme p-0">
   <contact-root class="p-4"></contact-root>
