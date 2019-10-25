@@ -1,7 +1,7 @@
 <profile></profile>
 <div id="main-div" class="w3-theme-l5">
   <div id="main-card" class="card mb-0">
-    <div class="card-header w3-theme-l5 w3-xxlarge mb-0">
+    <div class="card-header w3-theme-l5 mb-0" style="font-size: 4.5vh">
       {{ headerTitle }}
     </div>
     <div class="card-body">
@@ -10,71 +10,48 @@
   </div>
   <skills></skills>
   <div id="resume-div" class="d-block p-0 w3-theme-l5">
-    <div class="container" id="truck-hunt">
-  <div id="carousel-skills" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <p>Skill 1</p>
+    <div id="resume-block" class="card pr-0 pl-0 text-center w3-theme shadow">
+      <div class="card-body" id="skills-container">
+      <div id="carousel-skills" class="carousel slide" data-ride="carousel">
+	  	      <div class="carousel-inner">
+	  	        <div class="carousel-item active" style="font-size: 2.7vh">
+	  	          <p>JavaScript & TypeScript Application Development:</p>
+	  	          <p>Node.js, Angular, Express</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>Chatbot Development:</p>
+	  	          <p>Microsoft Bot Framework</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>Cloud Application Development:</p>
+	  	          <p>Microsoft Azure</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>Java Application Development:</p>
+	  	          <p>Spring, Spring Boot</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>HTML5 & CSS3</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>Research & Data Visualization</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>Writing</p>
+	  	        </div>
+	  	        <div class="carousel-item" style="font-size: 2.7vh">
+	  	          <p>Office365</p>
+	  	        </div>
+	  	      </div>
+	    </div>
       </div>
-      <div class="carousel-item">
-        <p>skill 2</p>
-      </div>      
-      <div class="carousel-item">
-        <p>skill 3</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 4</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 5</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 6</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 7</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 8</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 9</p>
-      </div>
-      <div class="carousel-item">
-        <p>skill 10</p>
-      </div>
-    </div>
-    <div id="controls">
-      <a
-        class="carousel-control-prev"
-        href="#carousel-skills"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#carousel-skills"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-</div>
-    <div id="resume-block" class="card text-center w3-theme shadow">
-      <div class="card-body"> ... </div>
     </div>
   </div>
   <div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="resume-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content w3-theme-l5 m-0 p-0">
         <div class="modal-header">
-          <h4 class="modal-title w3-text-theme w3-xlarge" id="resume-modal-title">Thanks for Visiting!</h4>
+          <h4 class="modal-title w3-text-theme" style="font-size: 4vh" id="resume-modal-title">Thanks for Visiting!</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -84,22 +61,21 @@
             <img id="m-img" class="m-0 p-0" src="../assets/images/balloons.jpg">
           </div>
           <div id="modal-content" class="col-lg p-0 m-1">
-            <p class="w3-text-theme w3-large m-2">I'd love to hear from you!</p>
-            <hr>
-            <form class="text-left">
+            <p class="w3-text-theme pt-2 pb-2 m-2 border-top border-bottom" style="font-size: 3.5vh">Let me know what you think</p>
+            <form class="text-left mr-1 ml-1">
               <div class="form-group">
-                <label for="sender-name" class="col-form-label">Name:</label>
-                <input type="text" class="form-control" id="sender-name">
+                <label for="sender-name" class="col-form-label" style="font-size: 2.5vh">Name:</label>
+                <input type="text" class="form-control" style="font-size: 2.5vh" id="sender-name">
               </div>
               <div class="form-group">
-                <label for="comment-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" rows="4" id="comment-text"></textarea>
+                <label for="comment-text" class="col-form-label" style="font-size: 2.5vh">Message:</label>
+                <textarea class="form-control" rows="3" style="font-size: 2.5vh" id="comment-text"></textarea>
               </div>
             </form>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Send message</button>
+          <button type="button" class="btn btn-dark" style="font-size: 2.5vh">Send message</button>
         </div>
       </div>
     </div>
@@ -107,11 +83,11 @@
 </div>
 <footer class="w3-text-theme p-0">
   <contact-root class="p-4"></contact-root>
-  <div id="icons" class="mb-0 p-3 w3-theme-d1">
+  <div id="icons" class="mb-0 p-3 w3-theme-d1" style="font-size: 2.5vh">
     <a href="https://github.com/ChepkorirBrenda" target="blank">
       <img id="icon" src="../assets/images/github.png" />
     </a>
     <br />
-    <span>By Brenda Chepkorir Nyangweso Â© 2019. All Rights Reserved.</span>
+    <span>By Brenda Chepkorir Nyangweso © 2019. All Rights Reserved.</span>
   </div>
 </footer>
