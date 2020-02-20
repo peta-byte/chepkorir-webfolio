@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -41,7 +41,7 @@ jobs:
       with:
          name: dist
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
+      run: docker build /ChepkorirBrenda/chepkorir-webfolio/ --file Dockerfile --tag ${{secrets.docker_image}}:v1
       
     - name: Docker Publish
       uses: manusa/actions-publish-docker@v1.0.1
