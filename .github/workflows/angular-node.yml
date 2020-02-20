@@ -20,11 +20,26 @@ jobs:
     - run: npm install
     - run: npm update  
     - run: npm run heroku-postbuild --if-present
+    - name: create dist artifact
+      uses: actions/upload-artifact@v1
+      with:
+         name: dist
+         path: dist
     #- run: npm test
       env:
         CI: true
-        
-    - uses: actions/checkout@v1
+
+  dockerize:
+    name: Get dist artifact and containerize
+    needs: build
+    
+    runs-on: [ubuntu-latest]
+    
+    steps:
+    - name: Get dist artifact
+      uses: actions/download-artifact@v1
+      with:
+         name: dist
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
       
