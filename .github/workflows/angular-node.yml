@@ -1,0 +1,42 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run heroku-postbuild --if-present
+    #- run: npm test
+      env:
+        CI: true
+        
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
+      
+    - name: Docker Publish
+      uses: manusa/actions-publish-docker@v1.0.1
+      with:
+        # Name of the Docker image
+        name: ${{secrets.docker_image}}
+        # Tag for the Docker image
+        tag: v1
+        # Username for Docker registry
+        username: ${{secrets.docker_username}}
+        # Password for Docker registry
+        password: ${{secrets.docker_password}}
+        # Registry URL
+        # registry: ${{secrets.docker_registry}}
