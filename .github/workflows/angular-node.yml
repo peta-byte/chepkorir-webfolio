@@ -41,7 +41,7 @@ jobs:
       with:
          name: dist
     - name: Create server file
-      run: printf "const express = require('express');\nconst path = require('path');\nconst app = express();\napp.use(express.static(__dirname + '/dist/chepkorir-webfolio'));\napp.get('/*', (req,res) => {res.sendFile(path.join(__dirname+'/dist/chepkorir-webfolio/index.html'));});\napp.listen(process.env.PORT || 4200);" | cat -> server.js
+      run: printf "const express = require('express');\nconst path = require('path');\nconst app = express();\napp.use(express.static(__dirname + '/webfolio/'));\napp.get('/*', (req,res) => {res.sendFile(path.join(__dirname+'/webfolio/index.html'));});\napp.listen(process.env.PORT || 4200);" | cat -> server.js
       
     - name: Create Dockerfile
       run: printf "FROM node:10.19.0-alpine3.9\nWORKDIR /home/angular/webfolio\nRUN npm install express path\nCOPY /dist/chepkorir-webfolio ./\nCOPY server.js ./\nEXPOSE 8088\nCMD node server.js" | cat -> Dockerfile
