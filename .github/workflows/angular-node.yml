@@ -41,7 +41,7 @@ jobs:
       with:
          name: dist
     - name: Create the Docker file
-      run: echo "FROM nginx:1.17.8-alpine WORKDIR /home/angular/portfolio COPY /dist/chepkorir-webfolio ./ EXPOSE 8080" | cat Dockerfile
+      run: echo "FROM nginx:1.17.8-alpine WORKDIR /home/angular/portfolio COPY /dist/chepkorir-webfolio ./ EXPOSE 8080" | cat -> Dockerfile
       
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
