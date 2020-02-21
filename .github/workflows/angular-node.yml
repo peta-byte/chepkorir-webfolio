@@ -44,7 +44,7 @@ jobs:
       run: printf "const express = require('express');\nconst path = require('path');\nconst app = express();\napp.use(express.static(__dirname + '/dist/chepkorir-webfolio'));\napp.get('/*', (req,res) => {res.sendFile(path.join(__dirname+'/dist/chepkorir-webfolio/index.html'));});\napp.listen(process.env.PORT || 4200);" | cat -> server.js
       
     - name: Create Dockerfile
-      run: printf "FROM node:10.19.0-alpine3.9\nWORKDIR /home/angular/webfolio\nRUN npm install express path\nCOPY /dist/chepkorir-webfolio ./\nEXPOSE 8088\nCMD ["node", "server.js"] | cat -> Dockerfile
+      run: printf "FROM node:10.19.0-alpine3.9\nWORKDIR /home/angular/webfolio\nRUN npm install express path\nCOPY /dist/chepkorir-webfolio ./\nEXPOSE 8088\nCMD ['node', 'server.js']" | cat -> Dockerfile
       
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
