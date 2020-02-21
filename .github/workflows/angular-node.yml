@@ -40,11 +40,11 @@ jobs:
       uses: actions/download-artifact@v1
       with:
          name: dist
-    - name: Create nginx config file
-      run: printf "server {\nlisten 8080;\nserver_name chepkorir-webfolio;\nroot /dist/chepkorir-webfolio\nlocation / {\ntry_files /index.html;\n}}" | cat -> nginx.conf
+    - name: Create server file
+      run: printf "const express = require('express');\nconst path = require('path');\nconst app = express();\napp.use(express.static(__dirname + '/dist/chepkorir-webfolio'));\napp.get('/*', (req,res) => {res.sendFile(path.join(__dirname+'/dist/chepkorir-webfolio/index.html'));});\napp.listen(process.env.PORT || 4200);" | cat -> server.js
       
-    - name: Create the Docker file
-      run: printf "FROM nginx:1.17.8-alpine\nWORKDIR /usr/share/nginx/html\nCOPY ./nginx.conf ./\nCOPY /dist/chepkorir-webfolio ./\nEXPOSE 8080" | cat -> Dockerfile
+    - name: Create Dockerfile
+      run: printf "FROM node:10.19.0-alpine3.9\nWORKDIR /home/angular/webfolio\nRUN npm install express path\nCOPY /dist/chepkorir-webfolio ./\nEXPOSE 8088\nCMD ["node", "server.js"] | cat -> Dockerfile
       
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
