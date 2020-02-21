@@ -40,6 +40,9 @@ jobs:
       uses: actions/download-artifact@v1
       with:
          name: dist
+    - name: Create nginx config file
+      run: printf "server {\nlisten 8080;\nserver_name chepkorir-webfolio;\nroot /dist/chepkorir-webfolio\nlocation / {\ntry_files /index.html;\n}}" | cat -> nginx.conf
+      
     - name: Create the Docker file
       run: printf "FROM nginx:1.17.8-alpine\nWORKDIR /home/angular/portfolio\nCOPY /dist/chepkorir-webfolio ./\nEXPOSE 8080" | cat -> Dockerfile
       
