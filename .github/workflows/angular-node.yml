@@ -40,8 +40,11 @@ jobs:
       uses: actions/download-artifact@v1
       with:
          name: dist
+    - name: Create the Docker file
+      run: echo "FROM nginx:1.17.8-alpine WORKDIR /home/angular/portfolio COPY /dist/chepkorir-webfolio ./ EXPOSE 8080" | cat Dockerfile
+      
     - name: Build the Docker image
-      run: docker build /ChepkorirBrenda/chepkorir-webfolio/ --file Dockerfile --tag ${{secrets.docker_image}}:v1
+      run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
       
     - name: Docker Publish
       uses: manusa/actions-publish-docker@v1.0.1
