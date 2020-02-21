@@ -47,7 +47,7 @@ jobs:
       run: printf "FROM node:10.19.0-alpine3.9\nWORKDIR /home/angular/webfolio\nRUN npm install express path\nCOPY /dist/chepkorir-webfolio ./\nEXPOSE 8088\nCMD ['node', 'server.js']" | cat -> Dockerfile
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v1
+      run: docker build . --file Dockerfile --tag ${{secrets.docker_image}}:v2
       
     - name: Docker Publish
       uses: manusa/actions-publish-docker@v1.0.1
@@ -55,7 +55,7 @@ jobs:
         # Name of the Docker image
         name: ${{secrets.docker_image}}
         # Tag for the Docker image
-        tag: v1
+        tag: v2
         # Username for Docker registry
         username: ${{secrets.docker_username}}
         # Password for Docker registry
