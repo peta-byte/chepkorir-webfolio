@@ -1,8 +1,7 @@
 # ChepkorirWebfolio
+![Node.js CI](https://github.com/ChepkorirBrenda/chepkorir-webfolio/workflows/Node.js%20CI/badge.svg?branch=master)
 
 A long time ago...in a galaxy so...so far away, I did a thing.
-
-![Node.js CI](https://github.com/ChepkorirBrenda/chepkorir-webfolio/workflows/Node.js%20CI/badge.svg?branch=master)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
